@@ -13,24 +13,24 @@
     }
 
     :root {
-      --bg: #020805;
-      --text: #f4fff8;
-      --muted: #a8c7b5;
-      --neon: #39ff88;
-      --neon-soft: rgba(57, 255, 136, 0.28);
-      --neon-faint: rgba(57, 255, 136, 0.11);
-      --glass: rgba(7, 32, 19, 0.48);
-      --glass-strong: rgba(57, 255, 136, 0.18);
-      --border: rgba(57, 255, 136, 0.32);
+      --bg: #020611;
+      --text: #f4f8ff;
+      --muted: #a8b7c7;
+      --neon: #39a7ff;
+      --neon-soft: rgba(57, 167, 255, 0.28);
+      --neon-faint: rgba(57, 167, 255, 0.11);
+      --glass: rgba(7, 19, 32, 0.48);
+      --glass-strong: rgba(57, 167, 255, 0.18);
+      --border: rgba(57, 167, 255, 0.32);
     }
 
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at 18% 18%, rgba(57, 255, 136, 0.24), transparent 30%),
-        radial-gradient(circle at 82% 72%, rgba(0, 255, 190, 0.18), transparent 34%),
-        radial-gradient(circle at 50% 105%, rgba(120, 255, 90, 0.13), transparent 38%),
-        linear-gradient(135deg, #020805 0%, #03140b 42%, #061006 100%);
+        radial-gradient(circle at 18% 18%, rgba(57, 167, 255, 0.24), transparent 30%),
+        radial-gradient(circle at 82% 72%, rgba(0, 140, 255, 0.18), transparent 34%),
+        radial-gradient(circle at 50% 105%, rgba(90, 170, 255, 0.13), transparent 38%),
+        linear-gradient(135deg, #020611 0%, #031027 42%, #06132b 100%);
       color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       overflow: hidden;
@@ -42,8 +42,8 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(rgba(57, 255, 136, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(57, 255, 136, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(57, 167, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 167, 255, 0.05) 1px, transparent 1px);
       background-size: 42px 42px;
       mask-image: radial-gradient(circle at center, black, transparent 72%);
       opacity: 0.55;
@@ -55,7 +55,14 @@
       position: fixed;
       inset: -20%;
       pointer-events: none;
-      background: conic-gradient(from 140deg, transparent, rgba(57, 255, 136, 0.09), transparent, rgba(0, 255, 190, 0.07), transparent);
+      background: conic-gradient(
+        from 140deg,
+        transparent,
+        rgba(57, 167, 255, 0.09),
+        transparent,
+        rgba(0, 140, 255, 0.07),
+        transparent
+      );
       filter: blur(42px);
       opacity: 0.75;
       animation: ambientGlow 14s linear infinite;
@@ -102,7 +109,7 @@
       font-size: clamp(1.35rem, 3vw, 2.4rem);
       font-weight: 700;
       letter-spacing: -0.04em;
-      text-shadow: 0 0 18px rgba(57, 255, 136, 0.42);
+      text-shadow: 0 0 18px rgba(57, 167, 255, 0.42);
     }
 
     .brand p {
@@ -145,10 +152,10 @@
       aspect-ratio: 9 / 16;
       border-radius: clamp(18px, 3vw, 34px);
       overflow: hidden;
-      background: #031008;
+      background: #031027;
       box-shadow:
         0 24px 80px rgba(0, 0, 0, 0.72),
-        0 0 46px rgba(57, 255, 136, 0.18);
+        0 0 46px rgba(57, 167, 255, 0.18);
       border: 1px solid var(--border);
     }
 
@@ -177,7 +184,7 @@
       letter-spacing: 0.04em;
       opacity: 0;
       pointer-events: none;
-      box-shadow: 0 0 24px rgba(57, 255, 136, 0.22);
+      box-shadow: 0 0 24px rgba(57, 167, 255, 0.22);
       transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
@@ -189,7 +196,7 @@
     .photo-frame:hover {
       box-shadow:
         0 28px 90px rgba(0, 0, 0, 0.78),
-        0 0 70px rgba(57, 255, 136, 0.34);
+        0 0 70px rgba(57, 167, 255, 0.34);
     }
 
     .photo-frame:hover .slide.active {
@@ -316,7 +323,7 @@
       border-radius: 18px;
       box-shadow:
         0 28px 90px rgba(0, 0, 0, 0.85),
-        0 0 52px rgba(57, 255, 136, 0.24);
+        0 0 52px rgba(57, 167, 255, 0.24);
       border: 1px solid var(--border);
     }
 
@@ -362,6 +369,8 @@
       .header {
         align-items: flex-start;
         padding-top: 18px;
+        flex-direction: column;
+        gap: 10px;
       }
 
       .brand h1 {
@@ -372,11 +381,6 @@
         position: static;
         transform: none;
         margin-top: 8px;
-      }
-
-      .header {
-        flex-direction: column;
-        gap: 10px;
       }
 
       .photo-frame {
@@ -410,21 +414,20 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header class="header">
       <div class="brand">
-        <h1>Christian Camilo Lancheros Sanchez</h1>
+        <h1>Ladi Yolima Martinez</h1>
         <p>Portafolio Fotográfico 2026</p>
       </div>
-
       <div class="counter" id="counter">1/18</div>
     </header>
 
     <main class="slider" id="slider">
       <section class="photo-frame" id="photoFrame">
         <p class="loading" id="loading">Cargando fotos...</p>
-
         <div class="dots" id="dots"></div>
       </section>
 
@@ -435,7 +438,7 @@
     </main>
 
     <footer class="footer">
-      © 2026 CCLS. Todos los derechos reservados.
+      © 2026 Todos los derechos reservados.
     </footer>
   </div>
 
@@ -456,7 +459,7 @@
     const loading = document.getElementById('loading');
 
     const CONFIG = {
-      githubUser: 'Rocnarx',
+      githubUser: 'Lymq17',
       githubRepo: 'college-portfolio',
       photosFolder: 'photos'
     };
@@ -598,8 +601,8 @@
 
     function handleSwipe() {
       const distance = touchStartX - touchEndX;
-
       if (Math.abs(distance) < 50) return;
+
       if (distance > 0) showNext();
       else showPrevious();
     }
